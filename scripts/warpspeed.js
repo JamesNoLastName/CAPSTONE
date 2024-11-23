@@ -15,4 +15,4 @@ window.onload = function () {
     "backgroundColor": "hsl(263,45%,7%)",
     "starColor": "#C7C7C7"
   });
-};
+}
