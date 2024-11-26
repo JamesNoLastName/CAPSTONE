@@ -1,0 +1,259 @@
+html, body {
+    margin: 0;
+    color: #fff;
+    font-family: Arial;
+    height: 100%;
+    overflow: hidden; /* Prevent scrollbars */
+  }
+  
+  /* Apply background image to the body */
+  body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  
+  
+  /* Keep the warpspeed canvas in the background */
+  #warp-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 1; /* Behind the text */
+  }
+  
+  /* Container for the flashing text */
+  .text-container {
+    width: 100vw;
+    height: 100vh;
+    font-weight: bold;
+    font-size: 36px;
+    position: relative;
+    z-index: 10; /* Above the canvas and background */
+    overflow: hidden;
+  }
+  
+  /* Each text element's initial setup */
+  .text-container > div {
+    opacity: 0; /* Start fully transparent */
+    animation: come2life 10s linear 1; /* Run the animation once */
+    transform-origin: center center;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    backface-visibility: hidden;
+    left: 50%; /* Start at the center horizontally */
+    top: 50%; /* Start at the center vertically */
+    transform: translate(-50%, -50%); /* Ensure they are centered exactly */
+    
+    /* Apply the background image inside the text */
+    background-image: url('/intromedia/nebula.jpg'); /* Add your image path here */
+    background-size: contain; /* Ensure the image covers the text area */
+    background-position: center; /* Center the image inside the text */
+    -webkit-background-clip: text; /* Webkit browsers */
+    background-clip: text; /* Non-webkit browsers */
+    color: transparent; /* Make text transparent to show the background image */
+  }
+  
+  /* Stagger animation delays for each text element */
+  .text-container > div:nth-child(1) {
+    animation-delay: 0s;  /* Starts immediately */
+  }
+  
+  .text-container > div:nth-child(2) {
+    animation-delay: 2s;  /* Starts 2 seconds later */
+  }
+  
+  .text-container > div:nth-child(3) {
+    animation-delay: 4s;  /* Starts 4 seconds later */
+  }
+  
+  .text-container > div:nth-child(4) {
+    animation-delay: 6s;  /* Starts 6 seconds later */
+  }
+  
+  .text-container > div:nth-child(5) {
+    animation-delay: 8s;  /* Starts 8 seconds later */
+  }
+  
+  /* Keyframes animation for expanding outward in a spiral */
+  @keyframes come2life {
+    0% {
+      transform: translate(-50%, -50%) scale(0) rotate(0deg); /* Start small and centered */
+      opacity: 0;
+      filter: blur(10px); /* Initially blurred */
+    }
+    25% {
+      transform: translate(-50%, -50%) scale(1) rotate(90deg); /* Normal size, 1/4 rotation */
+      opacity: 1;
+      filter: blur(0px); /* Clear blur */
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5) rotate(180deg); /* Grow larger, 1/2 rotation */
+      opacity: 1;
+      filter: blur(0px); /* Clear blur */
+    }
+    75% {
+      transform: translate(-50%, -50%) scale(2) rotate(270deg); /* Even larger, 3/4 rotation */
+      opacity: 1;
+      filter: blur(0px); /* Clear blur */
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(4) rotate(360deg); /* Maximum size, full rotation */
+      opacity: 0;
+      filter: blur(10px); /* Fade out with blur */
+    }
+  }
+
+
+/* Style for the "Test Word" */
+.introword {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the word */
+    font-size: 80px;
+    font-weight: bold;
+    opacity: 0; /* Hidden by default */
+    z-index: 15; /* Make sure it's above everything else */
+    transition: opacity 1s ease-in-out, transform 0.3s ease; /* Smooth transition for opacity and transform */
+    display: flex; /* Use flexbox to align the elements without space */
+    white-space: nowrap; /* Prevent line breaks between the spans */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+}
+
+/* When "show" class is added, the test word becomes visible */
+.introword.show {
+    opacity: 1;
+}
+
+/* Hover effect for "Test Word" */
+.introword:hover {
+    transform: translate(-50%, -50%) scale(1.1); /* Slightly enlarge the word when hovered */
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8); /* Add subtle text shadow to enhance visibility */
+    color: #fff; /* Ensure the text color is white when hovered */
+}
+
+/* Style for the "Astro" part */
+.astro {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    color: transparent;
+    padding: 0 0px;
+    margin: 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url('/intromedia/astro.jpg');
+    background-size: 120% 100%;
+    background-position: center;
+    -webkit-text-stroke: 2px white;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+/* Pseudo-element for the transparent rectangle behind the text (background image) */
+.astro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 100%;
+    background-image: url('/intromedia/astro.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+/* Pseudo-element for the solid white border around the image */
+.astro::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 100%;
+    border-left: 5px solid white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    z-index: 12;
+}
+
+/* Adjust the background image positioning for "biology" */
+.biology {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    color: transparent;
+    padding: 0 0px;
+    margin: 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url('/intromedia/biology.jpg');
+    background-size: 130% 100%;
+    background-position: left center;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+}
+
+/* Pseudo-element for the transparent rectangle behind the text (background image) */
+.biology::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 100%;
+    background-image: url('/intromedia/biology.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+/* Pseudo-element for the solid white border around the image */
+.biology::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 100%;
+    border-right: 5px solid white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 22;
+}
+
+/* Default state: Hide the main content until intro is done */
+#main-content {
+    display: none;
+}
+
+/* Styling for intro and button container (if necessary) */
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);  /* Example background */
+    z-index: 1000;  /* Higher than main content */
+}
