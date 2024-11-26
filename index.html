@@ -6,18 +6,27 @@
     <script src="./scripts/warpspeed.min.js"></script>
     <script src="./scripts/warpspeed.js" defer></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    
   </head>
   <body>
     <!-- The warpspeed effect canvas -->
     <canvas id="warp-slide" height="100%" width="100%"></canvas>
 
     <div class="text-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
+      <div>Astronomy</div>
+      <div>Chemistry</div>
+      <div>Geology</div>
+      <div>Physics</div>
+      <div>Biology</div>
     </div>
+
+    <!-- Test word container -->
+    <div id="test-word" class="test-word">Astrobiology</div>
+
+    <script>
+      // Set a timeout to display the test word after 10 seconds
+      setTimeout(() => {
+        document.getElementById("test-word").classList.add("show"); // Add "show" class to reveal the word
+      }, 10000); // 10 seconds delay
+    </script>
   </body>
 </html>
