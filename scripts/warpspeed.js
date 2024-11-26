@@ -1,5 +1,5 @@
-// warp-speed-config.js
-const WARP_SPEED_MAX = 14;
+// Initial warp speed config
+const WARP_SPEED_MAX = 15;
 const WARP_SPEED_NORMAL = 0.75;
 
 window.onload = function () {
