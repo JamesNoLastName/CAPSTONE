@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="./scripts/warpspeed.min.js"></script>
     <script src="./scripts/warpspeed.js" defer></script>
+    <script src="./scripts/script.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
   <body>
@@ -19,14 +20,18 @@
       <div>Biology</div>
     </div>
 
-    <!-- Test word container -->
-    <div id="test-word" class="test-word">Astrobiology</div>
-
+    <div id="introword" class="introword">
+      <div class="astrobiology-button-container">
+          <div class="astro">Astro</div><div class="biology">biology</div>
+      </div>
+    </div>
+  
+    
     <script>
       // Set a timeout to display the test word after 10 seconds
       setTimeout(() => {
-        document.getElementById("test-word").classList.add("show"); // Add "show" class to reveal the word
-      }, 10000); // 10 seconds delay
+        document.getElementById("introword").classList.add("show"); // Add "show" class to reveal the word
+      }, 15000); // 10 seconds delay
     </script>
   </body>
 </html>
