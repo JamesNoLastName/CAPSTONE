@@ -124,4 +124,14 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-  
+ 
+  document.addEventListener('DOMContentLoaded', () => {
+    const glassPanels = document.querySelectorAll('.glass-panel');
+
+    glassPanels.forEach(panel => {
+        panel.addEventListener('click', () => {
+            // Toggle the 'expanded' class to show/hide content
+            panel.classList.toggle('expanded');
+        });
+    });
+});
