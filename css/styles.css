@@ -40,7 +40,7 @@ html, body {
   /* Each text element's initial setup */
   .text-container > div {
     opacity: 0; /* Start fully transparent */
-    animation: come2life linear 10s infinite;
+    animation: come2life 10s linear 1; /* Run the animation once */
     transform-origin: center center;
     width: 300px;
     height: 200px;
@@ -49,6 +49,14 @@ html, body {
     left: 50%; /* Start at the center horizontally */
     top: 50%; /* Start at the center vertically */
     transform: translate(-50%, -50%); /* Ensure they are centered exactly */
+    
+    /* Apply the background image inside the text */
+    background-image: url('/media/nebula.jpg'); /* Add your image path here */
+    background-size: contain; /* Ensure the image covers the text area */
+    background-position: center; /* Center the image inside the text */
+    -webkit-background-clip: text; /* Webkit browsers */
+    background-clip: text; /* Non-webkit browsers */
+    color: transparent; /* Make text transparent to show the background image */
   }
   
   /* Stagger animation delays for each text element */
@@ -99,5 +107,23 @@ html, body {
       opacity: 0;
       filter: blur(10px); /* Fade out with blur */
     }
+  }
+  
+  /* Style for the "Test Word" */
+  .test-word {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the word */
+    font-size: 48px;
+    font-weight: bold;
+    opacity: 0; /* Hidden by default */
+    z-index: 15; /* Make sure it's above everything else */
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* When "show" class is added, the test word becomes visible */
+  .test-word.show {
+    opacity: 1;
   }
   
