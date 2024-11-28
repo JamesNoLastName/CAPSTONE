@@ -117,7 +117,7 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Center the word */
-    font-size: 80px;
+    font-size: 123px;
     font-weight: bold;
     opacity: 0; /* Hidden by default */
     z-index: 15; /* Make sure it's above everything else */
