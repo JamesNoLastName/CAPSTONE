@@ -15,15 +15,10 @@
       <!-- The warpspeed effect canvas -->
       <canvas id="warp-slide" height="100%" width="100%"></canvas>
       <img id="background" src="/intromedia/background-large.jpg" alt="background" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 1; z-index: -1;"/>
-
+  
       <!-- Background image (hidden initially) -->
       <img id="white-overlay" src="/intromedia/white.jpg" alt="White overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; z-index: -1;"/>
-      <script>
-        setTimeout(() => {
-          document.getElementById("introword").classList.add("show"); // Add "show" class to reveal the word
-        }, 15000); 
-      </script>
-     
+  
       <div class="text-container">
         <div>Astronomy</div>
         <div>Chemistry</div>
@@ -31,12 +26,17 @@
         <div>Physics</div>
         <div>Biology</div>
       </div>
-
+  
       <div id="introword" class="introword">
         <div class="astrobiology-button-container">
           <div class="astro">Astro</div><div class="biology">biology</div>
         </div>
       </div>
+  
+      <!-- Skip Intro button (icon only) -->
+      <button id="skipIntro" class="skip-intro-btn" onclick="skipIntro()">
+        <span class="skip-icon">⏭️</span>
+      </button>
     </div>
 
     <!-- Main Content (hidden initially) -->
