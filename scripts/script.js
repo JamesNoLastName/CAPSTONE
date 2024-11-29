@@ -134,3 +134,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+function skipIntro() {
+    const intro = document.getElementById('intro');
+    const mainContent = document.getElementById('main-content');
+    const whiteImage = document.querySelector('img[src="/intromedia/white.jpg"]');  // Ensure it's correctly selected
+  
+    // Fade the white image out
+    whiteImage.style.opacity = '0';
+    whiteImage.style.zIndex = '-1';  // Ensure white overlay is behind
+  
+    // Optionally, hide the intro and show the main content immediately or after a delay
+    intro.style.display = 'none';
+    mainContent.style.display = 'block';
+  
+    // If you want a similar delay (like the 3s timeout in stopWarpSpeed), add a setTimeout:
+    setTimeout(function () {
+      // This would mimic the stopWarpSpeed behavior after a delay
+      // Make sure to remove any active transitions from the intro section
+      intro.style.transition = 'none'; // Disable transition if necessary during skip
+      mainContent.style.transition = 'none'; // Disable transition on main content
+    }, 1000); // You can adjust this delay to match any desired transition effects
+  }
+  
