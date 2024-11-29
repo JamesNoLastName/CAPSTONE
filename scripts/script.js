@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let lastUpdateTime = 0;
     const updateInterval = 70;
   
-    // Create a white overlay image and add it to the body
     const whiteImage = document.createElement('img');
     whiteImage.src = '/intromedia/white.jpg';
     whiteImage.style.position = 'fixed';
