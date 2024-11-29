@@ -257,3 +257,20 @@ html, body {
     background-color: rgba(0, 0, 0, 0.7);  /* Example background */
     z-index: 1000;  /* Higher than main content */
 }
+
+/* Style for the Skip Intro button */
+.skip-intro-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.skip-intro-btn:hover {
+  color: #ccc;
+}
