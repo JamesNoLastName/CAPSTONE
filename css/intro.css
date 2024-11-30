@@ -81,6 +81,7 @@ html, body {
     animation-delay: 8s;  /* Starts 8 seconds later */
   }
   
+  
   /* Keyframes animation for expanding outward in a spiral */
   @keyframes come2life {
     0% {
@@ -273,4 +274,5 @@ html, body {
 
 .skip-intro-btn:hover {
   color: #ccc;
+  transform: scale(1.1);
 }
