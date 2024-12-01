@@ -6,8 +6,13 @@
     <script src="./scripts/warpspeed.min.js"></script>
     <script src="./scripts/warpspeed.js" defer></script>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/nav.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/intro.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+
   </head>
   <body>
     <!-- Wrap the WarpSpeed, background photo, and button in an intro tag -->
@@ -48,28 +53,70 @@
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
-      <!-- Navbar with links -->
-      <nav>
-        <a href="#homeTab" data-bs-toggle="tab">Home</a>
-        <a href="#searchTab" data-bs-toggle="tab">The Search</a>
-        <a href="#timelineTab" data-bs-toggle="tab">Timeline</a>
-        <a href="#biasesTab" data-bs-toggle="tab">Our Biases</a>
-        <a href="#worksCitedTab" data-bs-toggle="tab">Works Cited</a>
-      </nav>
-    
-    
-    
-        </div>
-    </div>
-    
-    </div>
-    
-    
-    
-    
-  
 
-    </div>
+      <!-- Navbar -->
+      <nav>
+        <a href="javascript:void(0)" class="nav-link active" id="homeLink" onclick="showTab('home')">Home</a>
+        <a href="javascript:void(0)" class="nav-link" id="searchLink" onclick="showTab('search')">The Search</a>
+        <a href="javascript:void(0)" class="nav-link" id="timelineLink" onclick="showTab('timeline')">Timeline</a>
+        <a href="javascript:void(0)" class="nav-link" id="biasesLink" onclick="showTab('biases')">Our Biases</a>
+        <a href="javascript:void(0)" class="nav-link" id="worksCitedLink" onclick="showTab('worksCited')">Works Cited</a>
+      </nav>
+
+      <!-- Tab Content Sections -->
+      <div id="homeTab" class="tab-content">
+      
     
+        <div class="grid-container">
+          <div class="glass-panel">
+            <div class="panel-header">What is Astrobiology?</div>
+            <div class="panel-content">
+              Astrobiology is an interdisciplinary field that deals with the origins, evolution, and search for life throughout the cosmos. 
+              It combines areas of Astronomy, Chemistry, Geology, Physics, and Biology to advance knowledge regarding Earth's place in the universe.
+            </div>
+          </div>
+          <div class="glass-panel">
+              <div class="panel-header">Panel 2</div>
+              <img class="panel-image" src="media/astrob.jpg" alt="Image inside panel">
+              <div class="panel-content">Short content for the second panel. Maybe more detailed text could go here later.</div>
+          </div>
+          <div class="glass-panel">
+              <div class="panel-header">Panel 3</div>
+              <img class="panel-image" src="media/astrob.jpg" alt="Image inside panel">
+              <div class="panel-content"></div>
+          </div>
+          <div class="glass-panel">
+              <div class="panel-header">Panel 4</div>
+              <img class="panel-image" src="media/astrob.jpg" alt="Image inside panel">
+
+              <div class="panel-content">Tiny text here. Only a sentence or two to fill the space and test the appearance of the grid.</div>
+          </div>
+          <div class="glass-panel">
+              <div class="panel-header">Panel 5</div>
+              <img class="panel-image" src="media/astrob.jpg" alt="Image inside panel">
+
+              <div class="panel-content">This content is more lengthy and can go on a bit longer. The goal is to check how different amounts of content interact with the layout.</div>
+          </div>
+          
+        </div> 
+      </div>
+      
+      <div id="searchTab" class="tab-content" style="display: none;">
+        <h2>The Search</h2>
+        <p>Here is the content for The Search section.</p>
+      </div>
+      <div id="timelineTab" class="tab-content" style="display: none;">
+        <h2>Timeline</h2>
+        <p>Explore the Timeline section.</p>
+      </div>
+      <div id="biasesTab" class="tab-content" style="display: none;">
+        <h2>Our Biases</h2>
+        <p>Information about biases.</p>
+      </div>
+      <div id="worksCitedTab" class="tab-content" style="display: none;">
+        <h2>Works Cited</h2>
+        <p>References and sources used in this content.</p>
+      </div>
+    </div>
   </body>
 </html>
