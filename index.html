@@ -81,8 +81,35 @@
             <div class="panel-header">2. Challenges In Astrobiology</div>
             <div class="panel-image-container">
                 <img class="panel-image" src="media/satellitedish.jpg" alt="Image inside panel">
-                <div class="panel-content">Short content for the second panel. Maybe more detailed text could go here later.</div>
-            </div>
+                <div class="panel-content">
+                  <ul>
+                      <li><strong>Distance</strong>: The sheer distance between Earth and other stars makes tracing life difficult, 
+                        as well as avoiding false positives.
+                      </li>
+                      <br>
+                      <li><strong>Origins</strong>: The process of abiogenesis (See panel 4) is still largely unknown, 
+                        causing uncertainty in conditions for life to exist.
+                      </li>
+                      <br>
+                      <li><strong>Ethics</strong>: Discovering extraterrestrial life would change our perspectives of life in its entirety. 
+                        Strict protocols would need to be introduced.
+                      </li>
+                      <br>
+                      <li><strong>Sample Size</strong>: Currently, only one example of planetary life (Earth's) exists, so it is 
+                        difficult to gauge the potential of life elsewhere.
+                      </li>
+                      <br>
+                      <li><strong>Funding</strong>: Astrobiology is more of a niche field, involving the work of several disciplines. 
+                        It is difficult to secure funding/grants for research.
+                      </li>
+                      <br>
+                      <li><strong>Communication</strong>: The highly abstract nature of Astrobiology and the depiction of aliens 
+                        throughout culture can easily lead to misunderstandings, and sensationalism within the media. This can damage the 
+                        legitimacy and reputation of the field entirely. <br>(See "Biases" tab)
+                      </li>
+                  </ul>
+                </div>
+              </div>
           </div>
         
           <div class="glass-panel" id="panel3" onclick="toggleImageVisibility(this)">
@@ -93,13 +120,33 @@
             </div>
           </div>
         
-          <div class="glass-panel" id="panel4" onclick="toggleImageVisibility(this)">
+          <div class="glass-panel" id="panel4" onclick="toggleExpand(this)">
             <div class="panel-header">4. Astrobiology Glossary (Expand)</div>
-            <div class="panel-image-container">
-              <img class="panel-image" src="media/satellitedish.jpg" alt="Image inside panel">
-              <div class="panel-content" id="panel2">Short content for the second panel. Maybe more detailed text could go here later.</div>
+            <div class="panel-content">
+                <!-- Initial text that shows by default -->
+                <p class="initial-content">This module contains some key vocabulary used in Astrobiology.</p>
+                <p class="expanded-content-text">
+                  <br>
+                </p>
+                <!-- Vocabulary list in expanded content (hidden by default) -->
+                <ul class="expanded-content-list">
+                  <li><strong>Abiogenesis</strong>: The theory that life on Earth originated from non-living matter through chemical reactions, eventually leading to the formation of simple organic molecules that evolved into living organisms. It explores how life could emerge under the right conditions, both on Earth and potentially on other planets.</li>
+                  <li><strong>Bio-signatures</strong>: Indicators/signals of life, such as specific chemical compounds or patterns, that could potentially be detected on other planets or moons. Some of these indicators include traces of Oxygen, Carbon Dioxide, Nitrogen, and pigments similar to Chlorophyll, found in plants.</li>
+                  <li><strong>Exoplanets</strong>: Planets that orbit other stars outside our solar system, many of which are considered potential candidates for hosting life.</li>
+                  <li><strong>Extremophiles</strong>: An organism that thrives in extreme conditions like high heat, acidity, or radiation. Research on extremophiles, such as the hardy tardigrade (water bear), which survives dehydration, radiation, and space, helps us understand potential life forms on other planets.</li>
+                  <li><strong>Fermi Paradox</strong>: Named after Physicist Enrico Fermi, is the contradiction between the high probability of extraterrestrial life and the lack of evidence of discovered life.</li>
+                  <li><strong>Habitability/Goldilocks Zone</strong>: The region around a star where conditions may be just right for liquid water to exist on a planet, which is thought to be essential for life.</li>
+                  <li><strong>Organic Molecules</strong>: Carbon-based molecules that are essential for life, often found in the study of extraterrestrial environments.</li>
+                  <li><strong>Radiation</strong>: Energy emitted as electromagnetic waves or particles, which can affect life on other planets.</li>
+                  <li><strong>SETI</strong>: A common abbreviation for the “Search for Extraterrestrial Intelligence”. As the name suggests, it is a scientific effort to detect signs of intelligent life beyond Earth, often through the observation of electromagnetic signals.</li>
+                  <li><strong>Terraforming</strong>: The process of altering a planet's environment to make it more Earth-like and suitable for human habitation.</li>
+              </ul>              
             </div>
-          </div>
+        </div>
+        
+        
+        
+        
         
           <div class="glass-panel" id="panel5">
             <div class="panel-header">Panel 5</div>

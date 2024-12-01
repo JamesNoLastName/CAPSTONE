@@ -45,7 +45,7 @@
 .panel-content {
     font-size: 16px;
     color: #fff;
-    opacity: 0; /* Initially hidden */
+    opacity: 1; /* Initially hidden */
     top: 0;
     left: 0;
     width: 100%;
@@ -54,11 +54,24 @@
     transition: opacity 0.5s ease; /* Smooth fade-in effect */
     padding: 0; /* No padding inside the content */
     margin: 0;  /* Remove any margin */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.panel-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.panel-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.panel-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .glass-panel#panel2 .panel-content,
-.glass-panel#panel3 .panel-content,
-.glass-panel#panel4 .panel-content {
+.glass-panel#panel3 .panel-content {
     position: absolute; /* Position the content absolutely */
     top: 0;
     left: 0;
@@ -76,18 +89,84 @@
 /* When clicked, keep the image faded and content visible */
 .glass-panel.clicked .panel-image {
     opacity: 0; /* Hide image */
+    z-index: -9999;
 }
 
 .glass-panel.clicked .panel-content {
     opacity: 1; /* Show content */
 }
 
-/* Expanded state box shadow */
-.glass-panel.expanded {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Keep expanded box-shadow for visual consistency */
-}
+
 
 .glass-panel.expanded:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.glass-panel.expanded {
+    grid-column: span var(--column-count); /* Make the panel span across all columns */
+    grid-row: span 1; /* Ensure it fills the whole row */
+    z-index: 100; /* Ensure it stays above other items */
+    visibility: visible; /* Ensure it's visible when expanded */
+    width: 95vw; /* Ensures it takes up the full width of its parent grid container */
+    box-sizing: border-box; /* Includes padding and borders in the element's total width */
+}
+
+
+/* Initial content shows by default */
+.initial-content {
+    display: block; /* Show initial content by default */
+}
+
+/* Expanded content is hidden by default */
+.expanded-content-list {
+    display: none; /* Hide expanded content list by default */
+    opacity: 0; /* Ensure it is not visible */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+}
+
+.expanded-content-text {
+    display: none; /* Hide expanded content list by default */
+    opacity: 0; /* Ensure it is not visible */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+}
+
+.glass-panel.expanded .expanded-content-text {
+    display: block; /* Show the list when expanded */
+    opacity: 1; /* Make the list visible */
+}
+
+/* When the panel is expanded, hide initial content and show expanded content */
+.glass-panel.expanded .initial-content {
+    display: none; /* Hide initial content */
+}
+
+.glass-panel.expanded .expanded-content-list {
+    display: block; /* Show the list when expanded */
+    opacity: 1; /* Make the list visible */
+}
+
+.expanded-content-list {
+    padding-left: 20px; /* Adds padding to the left to create space for the bullet points */
+    list-style-position: outside; /* Ensures bullets are properly aligned inside the list container */
+}
+
+.expanded-content-list li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    padding: 8px 12px;  /* Add padding to the list items (top-bottom, left-right) */
+    background-color: rgba(255, 255, 255, 0.1); /* Optional: Light background color for each item */
+    border-radius: 4px;  /* Optional: Rounded corners for list items */
+}
+
+.expanded-content-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2);  /* Optional: Hover effect */
+}
+
+
+/* Add any additional transition effects if needed */
+.glass-panel.expanded {
+    /* Optional: Make the panel expand */
+    grid-column: span var(--column-count);
+    z-index: 100;
 }
