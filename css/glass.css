@@ -71,7 +71,8 @@
 }
 
 .glass-panel#panel2 .panel-content,
-.glass-panel#panel3 .panel-content {
+.glass-panel#panel3 .panel-content,
+.glass-panel#panel5 .panel-content {
     position: absolute; /* Position the content absolutely */
     top: 0;
     left: 0;
@@ -170,3 +171,18 @@
     grid-column: span var(--column-count);
     z-index: 100;
 }
+
+.panel-paragraph {
+    display: block;
+  }
+  
+  .panel-paragraph::before {
+    content: '\00a0\00a0\00a0\00a0'; /* Inserts 4 spaces (non-breaking spaces) */
+    display: inline-block;
+  }
+  
+  .panel-paragraph br {
+    display: block;
+    margin-top: 10px; /* Adjust for line spacing between 'paragraphs' */
+  }
+  
