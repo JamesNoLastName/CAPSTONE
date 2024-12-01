@@ -1,0 +1,5 @@
+.glass-panel.expanded .panel-content {
+    display: block;
+    max-height: 500px; /* Adjust as needed */
+    opacity: 1;
+}
