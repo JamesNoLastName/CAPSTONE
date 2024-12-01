@@ -164,3 +164,35 @@ function skipIntro() {
         image.style.opacity = 1;   // Show image when not clicked
     }
 }
+
+function toggleExpand(panel) {
+    // Get all panels
+    const allPanels = document.querySelectorAll('.glass-panel');
+    
+    // Check if the panel is already expanded
+    if (panel.classList.contains('expanded')) {
+        // Collapse the expanded panel and restore the original layout for all panels
+        panel.classList.remove('expanded');
+        
+        // Show all other panels again
+        allPanels.forEach(p => {
+            p.style.visibility = 'visible';
+            p.style.display = 'block'; // Ensure other panels are displayed normally
+        });
+    } else {
+        // Expand the clicked panel
+        allPanels.forEach(p => {
+            if (p !== panel) {
+                // Hide other panels when one is expanded
+                p.classList.remove('expanded');
+                p.style.visibility = 'hidden'; // Hide other panels
+                p.style.display = 'none'; // Remove them from the grid layout
+            }
+        });
+
+        // Expand the clicked panel
+        panel.classList.add('expanded');
+        panel.style.visibility = 'visible'; // Ensure the expanded panel remains visible
+        panel.style.display = 'block'; // Ensure it stays in the grid layout
+    }
+}
