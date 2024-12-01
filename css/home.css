@@ -1,0 +1,51 @@
+:root {
+    --grid-gap: 20px;
+    --row-height: auto;
+    --column-count: 4;
+    --navbar-height: 30px; /* Adjust based on your navbar height */
+    --navbar-margin: 10px; /* Optional: space for additional margin around navbar */
+    --bottom-margin: 60px; /* Optional: margin for the bottom */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(var(--column-count), 1fr); /* 4 equal-width columns */
+    grid-auto-rows: minmax(150px, 1fr); /* Ensure rows stretch to fill the available space */
+    grid-gap: var(--grid-gap); /* Space between grid items (applies to both rows and columns) */
+    grid-column-gap: 10px; /* Adjust the space between columns (you can set this to your desired value) */
+    margin: var(--navbar-margin) auto 0; /* Add top margin to create space for navbar */
+    padding: 20px; /* Optional: padding for the container */
+    height: calc(100vh - var(--navbar-height) - var(--navbar-margin) - var(--bottom-margin));
+    overflow: hidden; /* Prevent scrolling */
+}
+
+
+
+
+/* Grid Item Span Usage */
+
+/* Example: Panels that should span across multiple columns */
+.glass-panel:nth-child(1) {
+    grid-column-end: span 3; /* 3 columns wide */
+    grid-row-end: span 1; /* Ensure it spans only 1 row */
+}
+
+.glass-panel:nth-child(2) {
+    grid-column-end: span 1; /* 1 column wide */
+    grid-row-end: span 3; /* Adjusted to span 3 rows */
+}
+
+.glass-panel:nth-child(3) {
+    grid-column-end: span 2; /* 2 columns wide */
+    grid-row-end: span 3; /* Adjusted to span 3 rows */
+}
+
+/* Example: Panels that should span across multiple rows */
+.glass-panel:nth-child(4) {
+    grid-column-end: span 1; /* 1 column wide */
+    grid-row-end: span 2; /* Adjusted to span 2 rows */
+}
+
+.glass-panel:nth-child(5) {
+    grid-column-end: span 2; /* 2 columns wide */
+}
