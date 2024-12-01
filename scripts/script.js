@@ -148,4 +148,19 @@ function skipIntro() {
     }, 1000); // You can adjust this delay to match any desired transition effects
   }
 
-  
+  function toggleImageVisibility(panel) {
+    const image = panel.querySelector('.panel-image');
+    const content = panel.querySelector('.panel-content');
+
+    // Toggle the clicked state to handle image and content visibility
+    panel.classList.toggle('clicked');  // This will toggle the visibility of the content and image
+
+    // Ensure proper opacity toggle
+    if (panel.classList.contains('clicked')) {
+        content.style.opacity = 1; // Show content when clicked
+        image.style.opacity = 0;   // Hide image when clicked
+    } else {
+        content.style.opacity = 0; // Hide content when not clicked
+        image.style.opacity = 1;   // Show image when not clicked
+    }
+}

@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/nav.css" />
     <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link rel="stylesheet" type="text/css" href="css/glass.css" />
 
   </head>
   <body>
@@ -68,35 +69,45 @@
       
     
         <div class="grid-container">
-          <div class="glass-panel">
-            <div class="panel-header">What is Astrobiology?</div>
+          <div class="glass-panel" id="panel1">
+            <div class="panel-header">1. What is Astrobiology?</div>
             <div class="panel-content">
               Astrobiology is an interdisciplinary field that deals with the origins, evolution, and search for life throughout the cosmos. 
               It combines areas of Astronomy, Chemistry, Geology, Physics, and Biology to advance knowledge regarding Earth's place in the universe.
             </div>
           </div>
-          <div class="glass-panel">
-              <div class="panel-header">Panel 2</div>
-              <img class="panel-image" src="media/astrob.jpg" alt="Image inside panel">
+        
+          <div class="glass-panel" id="panel2" onclick="toggleImageVisibility(this)">
+            <div class="panel-header">2. Challenges In Astrobiology</div>
+            <div class="panel-image-container">
+                <img class="panel-image" src="media/satellitedish.jpg" alt="Image inside panel">
+                <div class="panel-content">Short content for the second panel. Maybe more detailed text could go here later.</div>
+            </div>
+          </div>
+        
+          <div class="glass-panel" id="panel3" onclick="toggleImageVisibility(this)">
+            <div class="panel-header">Panel 3</div>
+            <div class="panel-image-container">
+              <img class="panel-image" src="media/satellitedish.jpg" alt="Image inside panel">
               <div class="panel-content">Short content for the second panel. Maybe more detailed text could go here later.</div>
+            </div>
           </div>
-          <div class="glass-panel">
-              <div class="panel-header">Panel 3</div>
-              <img class="panel-image" src="media/astrob.jpg" alt="Image inside panel">
-              <div class="panel-content"></div>
+        
+          <div class="glass-panel" id="panel4" onclick="toggleImageVisibility(this)">
+            <div class="panel-header">4. Astrobiology Glossary (Expand)</div>
+            <div class="panel-image-container">
+              <img class="panel-image" src="media/satellitedish.jpg" alt="Image inside panel">
+              <div class="panel-content" id="panel2">Short content for the second panel. Maybe more detailed text could go here later.</div>
+            </div>
           </div>
-          <div class="glass-panel">
-              <div class="panel-header">Panel 4</div>
-              <img class="panel-image" src="media/astrob.jpg" alt="Image inside panel">
-
-              <div class="panel-content">Tiny text here. Only a sentence or two to fill the space and test the appearance of the grid.</div>
+        
+          <div class="glass-panel" id="panel5">
+            <div class="panel-header">Panel 5</div>
+            <img class="panel-image" src="media/astrob.jpg" alt="Image inside panel">
+            <div class="panel-content">This content is more lengthy and can go on a bit longer. The goal is to check how different amounts of content interact with the layout.</div>
           </div>
-          <div class="glass-panel">
-              <div class="panel-header">Panel 5</div>
-              <img class="panel-image" src="media/astrob.jpg" alt="Image inside panel">
-
-              <div class="panel-content">This content is more lengthy and can go on a bit longer. The goal is to check how different amounts of content interact with the layout.</div>
-          </div>
+        </div>
+        
           
         </div> 
       </div>

@@ -32,7 +32,7 @@
 
 .glass-panel:nth-child(2) {
     grid-column-end: span 1; /* 1 column wide */
-    grid-row-end: span 3; /* Adjusted to span 3 rows */
+    grid-row-end: span 2; /* Adjusted to span 3 rows */
 }
 
 .glass-panel:nth-child(3) {
@@ -43,9 +43,26 @@
 /* Example: Panels that should span across multiple rows */
 .glass-panel:nth-child(4) {
     grid-column-end: span 1; /* 1 column wide */
-    grid-row-end: span 2; /* Adjusted to span 2 rows */
+    grid-row-end: span 1; /* Adjusted to span 2 rows */
 }
 
 .glass-panel:nth-child(5) {
     grid-column-end: span 2; /* 2 columns wide */
+    grid-row-end: span 2; /* Adjusted to span 3 rows */
 }
+
+.glass-panel#panel1 .panel-content,
+.glass-panel#panel5 .panel-content {
+    opacity: 1;  /* Ensure the content is always visible */
+}
+
+/* Panel 1 and 5 always show image */
+.glass-panel#panel1 .panel-image,
+.glass-panel#panel5 .panel-image {
+    opacity: 1;  /* Ensure the image is always visible */
+}
+
+.hidden-image {
+    opacity: 0; /* Hide the image by making it fully transparent */
+}
+

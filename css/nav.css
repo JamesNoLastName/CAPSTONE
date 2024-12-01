@@ -40,3 +40,7 @@ nav a:hover {
     border: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(32px); /* Keep this blur on hover for individual links */
 }
+
+nav a.active {
+    border: 1px solid rgba(255, 255, 255, 0.5);  /* Add the hover border effect */
+}
