@@ -58,6 +58,7 @@
 
 /* Panel 1 and 5 always show image */
 .glass-panel#panel1 .panel-image,
+.glass-panel#panel4 .panel-image,
 .glass-panel#panel5 .panel-image {
     opacity: 1;  /* Ensure the image is always visible */
 }
