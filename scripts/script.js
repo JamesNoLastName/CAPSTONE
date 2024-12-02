@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const updateInterval = 70;
   
     const whiteImage = document.createElement('img');
-    whiteImage.src = '/media/white.jpg';
+    whiteImage.src = 'media/white.jpg';
     whiteImage.style.position = 'fixed';
     whiteImage.style.top = '0';
     whiteImage.style.left = '0';
