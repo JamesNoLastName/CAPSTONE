@@ -55,7 +55,7 @@ html, body {
     transform: translate(-50%, -50%); /* Ensure they are centered exactly */
     
     /* Apply the background image inside the text */
-    background-image: url("/media/nebula.jpg"); /* Add your image path here */
+    background-image: url("media/nebula.jpg"); /* Add your image path here */
     background-size: contain; /* Ensure the image covers the text area */
     background-position: center; /* Center the image inside the text */
     -webkit-background-clip: text; /* Webkit browsers */
@@ -153,7 +153,7 @@ html, body {
     margin: 0;
     -webkit-background-clip: text;
     background-clip: text;
-    background-image: url('/media/astro.jpg');
+    background-image: url('media/astro.jpg');
     background-size: 120% 100%;
     background-position: center;
     -webkit-text-stroke: 2px white;
@@ -169,7 +169,7 @@ html, body {
     left: -10px;
     width: calc(100% + 20px);
     height: 100%;
-    background-image: url('/media/astro.jpg');
+    background-image: url('media/astro.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.3;
@@ -204,7 +204,7 @@ html, body {
     margin: 0;
     -webkit-background-clip: text;
     background-clip: text;
-    background-image: url('/media/biology.jpg');
+    background-image: url('media/biology.jpg');
     background-size: 130% 100%;
     background-position: left center;
     -webkit-text-stroke: 2px rgb(255, 255, 255);
@@ -218,7 +218,7 @@ html, body {
     left: -10px;
     width: calc(100% + 20px);
     height: 100%;
-    background-image: url('/media/biology.jpg');
+    background-image: url('media/biology.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.3;
