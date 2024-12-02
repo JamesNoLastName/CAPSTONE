@@ -201,7 +201,7 @@ html, body {
     margin: 0;
     -webkit-background-clip: text;
     background-clip: text;
-    background-image: url('/intromedia/biology.jpg');
+    background-image: url('intromedia/biology.jpg');
     background-size: 130% 100%;
     background-position: left center;
     -webkit-text-stroke: 2px rgb(255, 255, 255);
