@@ -196,3 +196,4 @@ function toggleExpand(panel) {
         panel.style.display = 'block'; // Ensure it stays in the grid layout
     }
 }
+

@@ -1,0 +1,64 @@
+#searchTab .glass-container {
+    display: flex; /* Arrange panels in a row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snapping behavior */
+    gap: 1rem; /* Space between panels */
+    padding: 0 10px; /* Add small padding to the container (left and right) */
+    width: 100vw; /* Make the container the full width of the viewport */
+    height: 100vh; /* Make the container the full height of the viewport */
+    align-items: center; /* Vertically align panels */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    position: relative;
+    justify-content: flex-start; /* Ensure panels are aligned to the left */
+}
+
+#searchTab .glass-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+#searchTab .glass-panel {
+    flex: 0 0 auto; /* Prevent the panels from stretching or shrinking */
+    scroll-snap-align: center; /* Snap each panel to the center of the container */
+    width: 80%; /* Make the panel take up most of the screen width */
+    max-width: 400px; /* Prevent the panel from becoming too wide */
+    height: 80%; /* Make the panel take a significant portion of the screen height */
+    transition: transform 0.3s ease-in-out; /* Smooth animations for hover effects */
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center; /* Center horizontally */
+    box-sizing: border-box; /* Ensure padding and borders are included in the element's width/height */
+    padding: 10px; /* Add some padding to the panel */
+}
+
+#searchTab .glass-panel .panel-image {
+    width: 100%; /* Make the image take the full width of the panel */
+    margin-top: 5%;
+    height: 45%; /* Limit the height to 50% of the panel */
+    object-fit: cover; /* Make the image cover the space without distortion */
+    margin-bottom: 10px; /* Add some margin below the image */
+    border-radius: 8px;
+}
+
+#searchTab .glass-panel:first-child {
+    margin-left: 10px; /* Add small margin on the left for the first panel */
+}
+
+#searchTab .glass-panel .text-box {
+    width: 100%; /* Make the text box take the full width of the panel */
+    height: 100%; /* Make the text box take the remaining 50% of the panel */
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 8px; /* Rounded corners for the text box */
+    padding: 10px; /* Add padding inside the text box */
+    box-sizing: border-box; /* Ensure padding is included in the height/width */
+}
+
+#searchTab .glass-panel .text-box p {
+    margin: 0; /* Remove default margin from the paragraph */
+    color: white; /* Text color */
+    font-size: 1.2rem; /* Adjust text size */
+    text-align: center; /* Center the text inside the box */
+}
