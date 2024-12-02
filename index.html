@@ -8,13 +8,15 @@
     <script src="./scripts/script.js"></script>
     <script src="./scripts/search.js"></script>
     <script src="./scripts/nav.js"></script>
-   
+    <script src="./scripts/timeline.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/intro.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/nav.css" />
     <link rel="stylesheet" type="text/css" href="css/home.css" />
     <link rel="stylesheet" type="text/css" href="css/glass.css" />
     <link rel="stylesheet" type="text/css" href="css/search.css" />
+    <link rel="stylesheet" type="text/css" href="css/timeline.css" />
   </head>
   <body>
     <!-- Wrap the WarpSpeed, background photo, and button in an intro tag -->
@@ -215,9 +217,156 @@
       
 
       <div id="timelineTab" class="tab-content" style="display: none;">
-        <h2>Timeline</h2>
-        <p>Explore the Timeline section.</p>
+        <!-- Glass Panel Wrapper -->
+        <div class="glass-panel">
+          <div class="glass-panel-wrapper">
+            <svg display="none">
+              <symbol id="arrow">
+                <polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              </symbol>
+            </svg>
+            
+            <!-- Title -->
+            <h1>A Brief History of Astrobiology</h1>
+        
+            <!-- Timeline Container -->
+            <div id="timeline" class="timeline">
+              <div class="btn-group">
+                <button class="btn" type="button" data-action="expand">Expand All</button>
+                <button class="btn" type="button" data-action="collapse">Collapse All</button>
+              </div>
+              
+              <!-- Timeline Item 1 -->
+              <div class="timeline__item">
+                <div class="timeline__item-header">
+                  <button class="timeline__arrow" type="button" id="item1" aria-labelledby="item1-name" aria-expanded="false" aria-controls="item1-ctrld" aria-haspopup="true" data-item="1">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                      <use href="#arrow" />
+                    </svg>
+                  </button>
+                  <span class="timeline__dot"></span>
+                  <span id="item1-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="1970-01-01">Year 1</time><br>
+                    <strong class="timeline__title">Origin Event</strong>
+                  </span>
+                </div>
+                <div class="timeline__item-body" id="item1-ctrld" role="region" aria-labelledby="item1" aria-hidden="true">
+                  <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">Description 1</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Timeline Item 2 -->
+              <div class="timeline__item">
+                <div class="timeline__item-header">
+                  <button class="timeline__arrow" type="button" id="item2" aria-labelledby="item2-name" aria-expanded="false" aria-controls="item2-ctrld" aria-haspopup="true" data-item="2">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                      <use href="#arrow" />
+                    </svg>
+                  </button>
+                  <span class="timeline__dot"></span>
+                  <span id="item2-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="1973-10-17">Year 2</time><br>
+                    <strong class="timeline__title">Event 2</strong>
+                  </span>
+                </div>
+                <div class="timeline__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
+                  <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">Description 2</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Timeline Item 3 -->
+              <div class="timeline__item">
+                <div class="timeline__item-header">
+                  <button class="timeline__arrow" type="button" id="item3" aria-labelledby="item3-name" aria-expanded="false" aria-controls="item3-ctrld" aria-haspopup="true" data-item="3">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                      <use href="#arrow" />
+                    </svg>
+                  </button>
+                  <span class="timeline__dot"></span>
+                  <span id="item3-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="2001-09-09">Year 3</time><br>
+                    <strong class="timeline__title">Event 3</strong>
+                  </span>
+                </div>
+                <div class="timeline__item-body" id="item3-ctrld" role="region" aria-labelledby="item3" aria-hidden="true">
+                  <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">Description 3</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Timeline Item 4 -->
+              <div class="timeline__item">
+                <div class="timeline__item-header">
+                  <button class="timeline__arrow" type="button" id="item4" aria-labelledby="item4-name" aria-expanded="false" aria-controls="item4-ctrld" aria-haspopup="true" data-item="4">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                      <use href="#arrow" />
+                    </svg>
+                  </button>
+                  <span class="timeline__dot"></span>
+                  <span id="item4-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="2009-02-13">Year 4</time><br>
+                    <strong class="timeline__title">Event 4</strong>
+                  </span>
+                </div>
+                <div class="timeline__item-body" id="item4-ctrld" role="region" aria-labelledby="item4" aria-hidden="true">
+                  <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">Description 4</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Timeline Item 5 -->
+              <div class="timeline__item">
+                <div class="timeline__item-header">
+                  <button class="timeline__arrow" type="button" id="item5" aria-labelledby="item5-name" aria-expanded="false" aria-controls="item5-ctrld" aria-haspopup="true" data-item="5">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                      <use href="#arrow" />
+                    </svg>
+                  </button>
+                  <span class="timeline__dot"></span>
+                  <span id="item5-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="2033-05-18">Year 5</time><br>
+                    <strong class="timeline__title">Event 5</strong>
+                  </span>
+                </div>
+                <div class="timeline__item-body" id="item5-ctrld" role="region" aria-labelledby="item5" aria-hidden="true">
+                  <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">Description 5</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Timeline Item 6 -->
+              <div class="timeline__item">
+                <div class="timeline__item-header">
+                  <button class="timeline__arrow" type="button" id="item6" aria-labelledby="item6-name" aria-expanded="false" aria-controls="item6-ctrld" aria-haspopup="true" data-item="6">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                      <use href="#arrow" />
+                    </svg>
+                  </button>
+                  <span class="timeline__dot"></span>
+                  <span id="item6-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="2038-01-19">Year 6</time><br>
+                    <strong class="timeline__title">Event 6</strong>
+                  </span>
+                </div>
+                <div class="timeline__item-body" id="item6-ctrld" role="region" aria-labelledby="item6" aria-hidden="true">
+                  <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">Description 6</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      
+
       <div id="biasesTab" class="tab-content" style="display: none;">
         <h2>Our Biases</h2>
         <p>Information about biases.</p>
