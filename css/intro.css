@@ -55,7 +55,7 @@ html, body {
     transform: translate(-50%, -50%); /* Ensure they are centered exactly */
     
     /* Apply the background image inside the text */
-    background-image: url("media/nebula.jpg"); /* Add your image path here */
+    background-image: url("media/nebulae.jpg"); /* Add your image path here */
     background-size: contain; /* Ensure the image covers the text area */
     background-position: center; /* Center the image inside the text */
     -webkit-background-clip: text; /* Webkit browsers */
