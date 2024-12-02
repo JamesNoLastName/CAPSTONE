@@ -14,7 +14,10 @@ html, body {
     position: relative;
   }
 
-  
+  body {
+    color: #FFFFFF;  /* White text */
+    background-color: #000000; /* Optional: black background */
+  }
   
   /* Keep the warpspeed canvas in the background */
   #warp-slide {
