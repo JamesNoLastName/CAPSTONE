@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const updateInterval = 70;
   
     const whiteImage = document.createElement('img');
-    whiteImage.src = '/intromedia/white.jpg';
+    whiteImage.src = '/media/white.jpg';
     whiteImage.style.position = 'fixed';
     whiteImage.style.top = '0';
     whiteImage.style.left = '0';
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function skipIntro() {
     const intro = document.getElementById('intro');
     const mainContent = document.getElementById('main-content');
-    const whiteImage = document.querySelector('img[src="/intromedia/white.jpg"]');  // Ensure it's correctly selected
+    const whiteImage = document.querySelector('img[src="/media/white.jpg"]');  // Ensure it's correctly selected
   
     // Fade the white image out
     whiteImage.style.opacity = '0';
